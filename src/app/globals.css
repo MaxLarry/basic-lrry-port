@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+@theme {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+} */
+
+@font-face {
+  font-family: Larry-Regular;
+  src: url("../fonts/manrope/Manrope-Regular.ttf");
+}
+@font-face {
+  font-family: Larry-Medium;
+  src: url("../fonts/manrope/Manrope-Medium.ttf");
+}
+@font-face {
+  font-family: Larry-SemiBold;
+  src: url("../fonts/manrope/Manrope-SemiBold.ttf");
+}
+@font-face {
+  font-family: Larry-Bold;
+  src: url("../fonts/manrope/Manrope-Bold.ttf");
+}
+@font-face {
+  font-family: Larry-ExtraBold;
+  src: url("../fonts/manrope/Manrope-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: Syne-Regular;
+  src: url("../fonts/syne/Syne-Regular.ttf");
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+  --primary-color:#1c92d2;
+  --secondary-color:#f2fcfe;
+
+  --primary-dark: #156c9c;
+  --primary-light: #d9f4fc;
+  --accent-color: #0f4e75;
+}
+
+.dark{
+  --background: #0a0a0a;
+  --foreground: #ededed;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+/* Selection */
+::selection {
+  background-color: transparent;
+  color: rgb(2, 87, 90);
+  text-shadow: none;
+}
+::-moz-selection {
+  background-color: transparent;
+  color: rgb(2, 87, 90);
+  text-shadow: none;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: "Larry-Regular", sans-serif;
+}
+
+
+.section{
+  padding-top: clamp(70px, 7vw, 100px);
+  padding-right: 48px;
+  padding-left: 48px;
+  position: relative;
+}
+
+h1{
+  font-size: clamp(40px, 5vw, 60px);
+  line-height: 1;
+  font-family: "Larry-Bold", sans-serif;
+}
+p {
+  font-size: 20px;
+  font-family: "Larry-Medium", sans-serif;
+
+}
+p.small {
+  font-size: 17px;
+  display: inline-block;
+  font-family: "Larry-Regular", sans-serif;
+}
+/* h1.big{
+  font-size: clamp(60px, 7.5vw, 150px);
+  line-height: 0.8em;
+  font-family: "Larry-Regular", sans-serif;
+  margin-bottom: 3vw;
+} */
+
+
+
+.button {
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 24px;
+  justify-content: center;
+  align-items: center;
+  height: 32px;
+  padding: 4px 15px;
+  font-family: "Larry-SemiBold", sans-serif;
+  font-size: clamp(10px, 1vw, 13px);
+  line-height: 1;
+  transition: all 0.45s ease-in-out;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.prim {
+  background-color: var(--accent-color);
+  color: #ffff;
+}
+
+.non-prim {
+  border: 1px solid currentColor;
+}
+
+
+.button-link:hover,
+.mobile-button:hover {
+ 
+}
