@@ -27,7 +27,7 @@ const hero = () => {
         {/* Big Title* */}
         <div className="flex flex-col gap-5 lg:gap-9 max-w-4xl mb-6">
           <h1>
-            Bridging logic and <i>creativity</i> in the digital space.
+            Bridging logic and <i className="bg-gradient-to-r from-[#007cf0] via-[#00dfd8] to-[#7928ca] bg-clip-text text-transparent animated-gradient">creativity</i> in the digital space.
           </h1>
           <p className="small">
             I'm a software developer and graphic designer passionate about

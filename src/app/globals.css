@@ -121,7 +121,7 @@ p.small {
 }
 
 .prim {
-  background-color: var(--accent-color);
+  background-color: var(--primary-dark);
   color: #ffff;
 }
 
@@ -133,4 +133,15 @@ p.small {
 .button-link:hover,
 .mobile-button:hover {
  
+}
+
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.animated-gradient {
+  background-size: 200% 200%;
+  animation: gradientShift 4s ease infinite;
 }
