@@ -7,7 +7,7 @@ import { Copy, Plus } from "lucide-react";
 const hero = () => {
   return (
     <div
-      className="section section-hero max-w-7xl mx-auto flex items-center h-[550px]"
+      className="section flex items-center h-[550px]"
       id="home"
     >
       <div className="flex flex-col justify-start gap-3">
@@ -26,8 +26,8 @@ const hero = () => {
 
         {/* Big Title* */}
         <div className="flex flex-col gap-5 lg:gap-9 max-w-4xl mb-6">
-          <h1>
-            Bridging logic and <i className="bg-gradient-to-r from-[#007cf0] via-[#00dfd8] to-[#7928ca] bg-clip-text text-transparent animated-gradient">creativity</i> in the digital space.
+          <h1 className="big">
+            Bridging logic and <span className="italic bg-gradient-to-r from-[#007cf0] via-[#00dfd8] to-[#7928ca] bg-clip-text text-transparent animated-gradient">creativity</span> in the digital space.
           </h1>
           <p className="small">
             I'm a software developer and graphic designer passionate about

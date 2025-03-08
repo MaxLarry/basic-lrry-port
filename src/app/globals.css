@@ -78,19 +78,24 @@ body {
   padding-left: 48px;
   position: relative;
 }
-
 h1{
+  font-size: clamp(25px, 3vw, 30px);
+  line-height: 1;
+  font-family: "Larry-Bold", sans-serif;
+}
+
+h1.big{
   font-size: clamp(40px, 5vw, 60px);
   line-height: 1;
   font-family: "Larry-Bold", sans-serif;
 }
 p {
-  font-size: 20px;
+  font-size:clamp(15px, 3vw,20px);
   font-family: "Larry-Medium", sans-serif;
 
 }
 p.small {
-  font-size: 17px;
+  font-size:clamp(11px, 2.5vw, 17px);
   display: inline-block;
   font-family: "Larry-Regular", sans-serif;
 }
