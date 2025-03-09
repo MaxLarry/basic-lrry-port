@@ -7,7 +7,7 @@ import CardAnimation from "@/src/components/ui/cardAnimation";
 
 const techStack = () => {
   return (
-    <div className="section flex justify-center h-[550px]">
+    <div className="section flex justify-center h-full">
       <div className="flex w-full items-center flex-col">
         <h1 className="uppercase mb-8">Tech Stack</h1>
         <div className="flex flex-col gap-10 items-center">
