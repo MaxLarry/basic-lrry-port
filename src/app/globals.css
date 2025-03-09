@@ -36,7 +36,7 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #3d3535;
 
   --primary-color:#1c92d2;
   --secondary-color:#f2fcfe;
@@ -47,7 +47,7 @@
 }
 
 .dark{
-  --background: #0a0a0a;
+  --background: #111111;
   --foreground: #ededed;
 }
 ::-webkit-scrollbar {
@@ -81,13 +81,11 @@ body {
 h1{
   font-size: clamp(25px, 3vw, 30px);
   line-height: 1;
-  font-family: "Larry-Bold", sans-serif;
+  font-family: "Larry-ExtraBold", sans-serif;
 }
 
 h1.big{
   font-size: clamp(40px, 5vw, 60px);
-  line-height: 1;
-  font-family: "Larry-Bold", sans-serif;
 }
 p {
   font-size:clamp(15px, 3vw,20px);
@@ -96,7 +94,11 @@ p {
 }
 p.small {
   font-size:clamp(11px, 2.5vw, 17px);
-  display: inline-block;
+  font-family: "Larry-Regular", sans-serif;
+}
+
+p.name {
+  font-size:clamp(10px, 2vw, 12px);
   font-family: "Larry-Regular", sans-serif;
 }
 /* h1.big{
@@ -149,4 +151,13 @@ p.small {
 .animated-gradient {
   background-size: 200% 200%;
   animation: gradientShift 4s ease infinite;
+}
+
+
+
+/* cards effect*/
+
+
+.cards{
+
 }
