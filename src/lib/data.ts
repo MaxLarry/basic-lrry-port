@@ -1,8 +1,10 @@
 import reactLogo from "@/src/img/tech/react.svg";
-import nextLogo from "@/src/img/tech/nextdotjs.svg";
+import nextLogoBlack from "@/src/img/tech/nextdotjs_light.svg";
+import nextLogoWhite from "@/src/img/tech/nextdotjs_dark.svg";
 import javascriptLogo from "@/src/img/tech/javascript.svg";
 import typeScriptLogo from "@/src/img/tech/typescript.svg";
 import firebaseLogo from "@/src/img/tech/firebase.svg";
+import supabaseLogo from "@/src/img/tech/supabase.svg";
 import tailwindLogo from "@/src/img/tech/tailwindcss.svg";
 
 {
@@ -11,8 +13,11 @@ import tailwindLogo from "@/src/img/tech/tailwindcss.svg";
 import figmaLogo from "@/src/img/tech/figma.svg"
 import aiLogo from "@/src/img/tech/adobeillustrator.svg"
 import psLogo from "@/src/img/tech/adobephotoshop.svg"
-import blenderLogo from "@/src/img/tech/adobephotoshop.svg"
-import framerLogo from "@/src/img/tech/adobeillustrator.svg"
+import blenderLogo from "@/src/img/tech/blender.svg"
+import framerLogoBlack from "@/src/img/tech/Framer_light.svg"
+import framerLogoWhite from "@/src/img/tech/Framer_dark.svg"
+import canvaLogo from "@/src/img/tech/canva.svg"
+
 
 export const minetechnStack = [
   {
@@ -22,7 +27,7 @@ export const minetechnStack = [
   },
   {
     name: "Next.js",
-    logo: nextLogo,
+    logo: {light:nextLogoBlack, dark:nextLogoWhite},
     description: "babu",
   },
   {
@@ -47,7 +52,7 @@ export const minetechnStack = [
   },
   {
     name: "Supabase",
-    logo: firebaseLogo,
+    logo: supabaseLogo,
     description: "babu",
   },
 ];
@@ -70,17 +75,17 @@ export const designStack = [
     },
     {
       name: "Framer",
-      logo: framerLogo,
+      logo: {light:framerLogoBlack, dark:framerLogoWhite},
       description: "babu",
     },
     {
       name: "Blender",
-      logo: figmaLogo,
+      logo: blenderLogo,
       description: "babu",
     },
     {
       name: "Canva",
-      logo: figmaLogo,
+      logo: canvaLogo,
       description: "babu",
     },
   ];

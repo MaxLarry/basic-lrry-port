@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import reactLogo from "@/src/img/tech/react.svg";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -12,18 +11,9 @@ const Footer = () => {
       <div className="section-footer prefooter">
         <div className="wrap-wide">
           {/* Left Section */}
-          <div className="sub-wrap">
-            <div className="w-16 h-16 bg-white flex rounded-full mb-4 justify-center items-center">
-              <Image
-                className="select-none"
-                src={reactLogo}
-                width={50}
-                height={100}
-                alt="palawonder"
-              ></Image>
-            </div>
+          <div className="text-center">
             <h1 className="uppercase">Let's Work Together</h1>
-            <p className="m-0">"Break free, create without boundaries"</p>
+            <p className="opacity-60">"Break free, create without boundaries"</p>
           </div>
 
         </div>

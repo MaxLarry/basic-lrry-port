@@ -3,9 +3,11 @@
 import React from "react";
 import { minetechnStack, designStack } from "@/src/lib/data";
 import Image from "next/image";
-import CardAnimation from "@/src/components/ui/cardAnimation";
+import { CardAnimation, BoxGlow } from "@/src/components/ui/cardAnimation";
+import { useTheme } from "next-themes";
 
 const techStack = () => {
+  const { theme } = useTheme();
   return (
     <div className="section flex justify-center h-full">
       <div className="flex w-full items-center flex-col">
@@ -16,17 +18,31 @@ const techStack = () => {
               🚀 Software Development
             </p>
             <div className="flex flex-wrap justify-center gap-5">
-              {minetechnStack.map((item, index) => (
-                <CardAnimation key={index}>
+              {minetechnStack.map((item, index) => {
+                // const typenito = typeof item.logo; // debug
+                // console.log(typenito);
+
+                const logoSrc =
+                  typeof item.logo === "object"
+                    ? "src" in item.logo
+                      ? item.logo.src
+                      : theme === "dark"
+                      ? item.logo.dark.src
+                      : item.logo.light.src
+                    : item.logo;
+                return (
+                  <BoxGlow key={index}>
                     <Image
-                      src={item.logo}
+                      src={logoSrc}
                       width={35}
                       height={35}
                       alt={`${item.name}-svg`}
+                      suppressHydrationWarning
                     ></Image>
                     <p className="name opacity-60">{item.name}</p>
-                </CardAnimation>
-              ))}
+                  </BoxGlow>
+                );
+              })}
             </div>
           </div>
           <div>
@@ -34,17 +50,28 @@ const techStack = () => {
               ✨ Design
             </p>
             <div className="flex flex-wrap justify-center gap-5">
-              {designStack.map((item, index) => (
-                <CardAnimation key={index}>
-                  <Image
-                    src={item.logo}
-                    width={35}
-                    height={35}
-                    alt={`${item.name}-svg`}
-                  ></Image>
-                  <p className="name opacity-60">{item.name}</p>
-                </CardAnimation>
-              ))}
+              {designStack.map((item, index) => {
+                const logoSrc =
+                  typeof item.logo === "object"
+                    ? "src" in item.logo
+                      ? item.logo.src
+                      : theme === "dark"
+                      ? item.logo.dark.src
+                      : item.logo.light.src
+                    : item.logo;
+                return (
+                  <BoxGlow key={index}>
+                    <Image
+                      src={logoSrc}
+                      width={35}
+                      height={35}
+                      alt={`${item.name}-svg`}
+                      suppressHydrationWarning
+                    ></Image>
+                    <p className="name opacity-60">{item.name}</p>
+                  </BoxGlow>
+                );
+              })}
             </div>
           </div>
         </div>

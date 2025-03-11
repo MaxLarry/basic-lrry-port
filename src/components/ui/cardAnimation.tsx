@@ -3,30 +3,11 @@
 import React, { ReactNode, useState } from "react";
 import { motion } from "framer-motion";
 
-const CardAnimation = ({ children }: { children: ReactNode }) => {
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-  const [isHovering, setIsHovering] = useState(false);
-
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    const { left, top } = e.currentTarget.getBoundingClientRect();
-    const x = e.clientX - left;
-    const y = e.clientY - top;
-    setMousePos({ x, y });
-  };
-
+export const CardAnimation = ({ children }: { children: ReactNode }) => {
   return (
     <motion.div
-      onMouseMove={handleMouseMove}
-      onMouseEnter={() => setIsHovering(true)}
-      onMouseLeave={() => setIsHovering(false)}
-      className="relative transition-all flex flex-col items-center justify-center p-4 gap-2 w-24 aspect-square rounded-lg border dark:border-white/10 border-black/10"
+      className="relative transition-all flex flex-col items-center justify-center p-4 gap-2 w-full rounded-lg border dark:border-white/10 border-black/10 hover:border-[var(--accent-color)] hover:shadow-[0px_0px_15px_3px_var(--accent-color)]"
       style={{
-        background: isHovering
-          ? `radial-gradient(circle at ${mousePos.x}px ${mousePos.y}px, 0px 0px 15px 3px var(--accent-color))`
-          : "transparent",
-        boxShadow: isHovering
-          ? `0px 0px 15px 3px var(--accent-color)`
-          : "0px 0px 0px transparent",
         transition: "all 0.4s ease-out",
       }}
     >
@@ -35,4 +16,15 @@ const CardAnimation = ({ children }: { children: ReactNode }) => {
   );
 };
 
-export default CardAnimation;
+export const BoxGlow = ({ children }: { children: ReactNode }) => {
+    return (
+      <motion.div
+        className="relative transition-all flex flex-col items-center justify-center p-4 gap-2 w-24 aspect-square rounded-lg border dark:border-white/10 border-black/10 hover:border-[var(--accent-color)] hover:shadow-[0px_0px_15px_3px_var(--accent-color)]"
+        style={{
+          transition: "all 0.4s ease-out",
+        }}
+      >
+        {children}
+      </motion.div>
+    );
+  };
