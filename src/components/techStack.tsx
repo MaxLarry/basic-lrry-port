@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { minetechnStack, designStack } from "@/src/lib/data";
 import Image from "next/image";
 import { CardAnimation, BoxGlow } from "@/src/components/ui/cardAnimation";
@@ -8,6 +8,12 @@ import { useTheme } from "next-themes";
 
 const techStack = () => {
   const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []); // Runs
+
   return (
     <div className="section flex justify-center h-full">
       <div className="flex w-full items-center flex-col">
@@ -21,6 +27,7 @@ const techStack = () => {
               {minetechnStack.map((item, index) => {
                 // const typenito = typeof item.logo; // debug
                 // console.log(typenito);
+                if (!mounted) return null;
 
                 const logoSrc =
                   typeof item.logo === "object"
@@ -34,9 +41,10 @@ const techStack = () => {
                   <BoxGlow key={index}>
                     <Image
                       src={logoSrc}
-                      width={35}
+                      width={0}
                       height={35}
                       alt={`${item.name}-svg`}
+                      className="lg:w-9 w-6"
                       suppressHydrationWarning
                     ></Image>
                     <p className="name opacity-60">{item.name}</p>
@@ -51,6 +59,7 @@ const techStack = () => {
             </p>
             <div className="flex flex-wrap justify-center gap-5">
               {designStack.map((item, index) => {
+                if (!mounted) return null;
                 const logoSrc =
                   typeof item.logo === "object"
                     ? "src" in item.logo
@@ -63,9 +72,10 @@ const techStack = () => {
                   <BoxGlow key={index}>
                     <Image
                       src={logoSrc}
-                      width={35}
+                      width={0}
                       height={35}
                       alt={`${item.name}-svg`}
+                      className="lg:w-9 w-6"
                       suppressHydrationWarning
                     ></Image>
                     <p className="name opacity-60">{item.name}</p>
