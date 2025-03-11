@@ -94,10 +94,14 @@ p a:hover {
 
 .section{
   padding-top: clamp(70px, 7vw, 100px);
-  padding-right: 48px;
-  padding-left: 48px;
   position: relative;
 }
+
+.section-project{
+  padding-top: clamp(70px, 7vw, 100px);
+  position: relative;
+}
+
 .section-footer {
   float: left;
   width: 100%;
@@ -107,8 +111,8 @@ p a:hover {
 .wrap-wide {
   margin: 0 auto;
   max-width: 1420px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
   position: relative;
 }
 @media screen and (max-width: 1740px) {
