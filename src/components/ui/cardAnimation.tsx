@@ -3,7 +3,7 @@
 import React, { ReactNode, useEffect, useRef, useState } from "react";
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
 
-export const CardAnimation = ({ children }: { children: ReactNode }) => {
+export const CardAnimation = () => {
   const offsetX = useMotionValue(0);
   const offsetY = useMotionValue(0);
 
@@ -28,14 +28,13 @@ export const CardAnimation = ({ children }: { children: ReactNode }) => {
 
   return (
     <motion.div
-      className=" border border-zinc-900 dark:border-zinc-300 rounded-lg"
+      className=" absolute inset-0 border border-zinc-900 dark:border-zinc-300 rounded-lg"
       style={{
         WebkitMaskImage: maskImage,
         maskImage,
       }}
       ref={border}
     >
-      {children}
     </motion.div>
   );
 };

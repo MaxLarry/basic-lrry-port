@@ -13,19 +13,19 @@ type TryData = {
 const tryData: TryData = [
   {
     name: "Mannavision",
-    desc: "blablslablsbasblabslablsbalbslabslablsabslbalsabl",
+    desc: "Automated attendance system that can recognize faces and check if they are wearing masks. Features real-time detection, attendance logging, and reporting capabilities for schools and offices.",
     techTags: ["React", "NodeJS", "MongoDB"],
     links: "itoooo",
   },
   {
     name: "Bakanaman",
-    desc: "blablslablsbasblabslablsbalbslabslablsabslbalsabl",
+    desc: "Automated attendance system that can recognize faces and check if they are wearing masks. Features real-time detection, attendance logging, and reporting capabilities for schools and offices.",
     techTags: ["React", "NodeJS", "MongoDB"],
     links: "itoooo",
   },
   {
     name: "Voice",
-    desc: "blablslablsbasblabslablsbalbslabslablsabslbalsabl",
+    desc: "Automated attendance system that can recognize faces and check if they are wearing masks. Features real-time detection, attendance logging, and reporting capabilities for schools and offices.",
     techTags: ["React", "NodeJS", "MongoDB"],
     links: "itoooo",
   },
@@ -41,13 +41,14 @@ const projects = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
-          {tryData.map((prj) => (
-            <CardAnimation key={prj.name}>
-                <div>
-                    <div></div>
+        {tryData.map((prj) => (
+            <div className="relative p-4 w-full h-full gap-2 items-center bg-black/20   rounded-lg " key={prj.name}>
+            <CardAnimation ></CardAnimation>
+                <div  className="fles flex-col">
+                  <h2>{prj.name}</h2>
+                  <p className="small">{prj.desc}</p>
                 </div>
-                
-                {prj.name}</CardAnimation>
+            </div>
           ))}
         </div>
       </div>
