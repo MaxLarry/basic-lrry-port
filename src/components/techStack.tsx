@@ -6,6 +6,7 @@ import Image from "next/image";
 import { CardAnimation, BoxGlow } from "@/src/components/ui/cardAnimation";
 import { useTheme } from "next-themes";
 
+
 const techStack = () => {
   const { theme } = useTheme();
   const [mounted, setMounted] = useState(false);
@@ -39,6 +40,7 @@ const techStack = () => {
                     : item.logo;
                 return (
                   <BoxGlow key={index}>
+                    <CardAnimation/>
                     <Image
                       src={logoSrc}
                       width={0}
@@ -70,6 +72,7 @@ const techStack = () => {
                     : item.logo;
                 return (
                   <BoxGlow key={index}>
+                    <CardAnimation/>
                     <Image
                       src={logoSrc}
                       width={0}

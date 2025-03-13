@@ -28,7 +28,7 @@ export const CardAnimation = () => {
 
   return (
     <motion.div
-      className=" absolute inset-0 border border-zinc-900 dark:border-zinc-300 rounded-lg"
+      className=" absolute inset-0 border border-[--primary-color] rounded-lg"
       style={{
         WebkitMaskImage: maskImage,
         maskImage,

@@ -134,6 +134,12 @@ h1{
   font-family: "Larry-ExtraBold", sans-serif;
 }
 
+h2{
+  font-size: clamp(19px, 3vw, 23px);
+  line-height: 1;
+  font-family: "Larry-Medium", sans-serif;
+}
+
 h1.big{
   font-size: clamp(40px, 5vw, 60px);
 }

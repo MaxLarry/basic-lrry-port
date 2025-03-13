@@ -29,6 +29,24 @@ const tryData: TryData = [
     techTags: ["React", "NodeJS", "MongoDB"],
     links: "itoooo",
   },
+  {
+    name: "Voice",
+    desc: "Automated attendance system that can recognize faces and check if they are wearing masks. Features real-time detection, attendance logging, and reporting capabilities for schools and offices.",
+    techTags: ["React", "NodeJS", "MongoDB"],
+    links: "itoooo",
+  },
+  {
+    name: "Voice",
+    desc: "Automated attendance system that can recognize faces and check if they are wearing masks. Features real-time detection, attendance logging, and reporting capabilities for schools and offices.",
+    techTags: ["React", "NodeJS", "MongoDB"],
+    links: "itoooo",
+  },
+  {
+    name: "Voice",
+    desc: "Automated attendance system that can recognize faces and check if they are wearing masks. Features real-time detection, attendance logging, and reporting capabilities for schools and offices.",
+    techTags: ["React", "NodeJS", "MongoDB"],
+    links: "itoooo",
+  },
 ];
 
 const projects = () => {
@@ -41,13 +59,23 @@ const projects = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
-        {tryData.map((prj) => (
-            <div className="relative p-4 w-full h-full gap-2 items-center bg-black/20   rounded-lg " key={prj.name}>
-            <CardAnimation ></CardAnimation>
-                <div  className="fles flex-col">
-                  <h2>{prj.name}</h2>
-                  <p className="small">{prj.desc}</p>
-                </div>
+          {tryData.map((prj, index) => (
+            <div
+              className="relative p-5 w-full h-full gap-2 items-center dark:bg-neutral-950/70 bg-neutral-100 rounded-lg "
+              key={`${prj.name} - ${index}`}
+            >
+              <CardAnimation></CardAnimation>
+              <div className="flex flex-col">
+                <h2>{prj.name}</h2>
+                <p className="small mt-4 dark:text-gray-400 text-gray-700">{prj.desc}</p>
+              </div>
+              <div className="flex flex-wrap gap-2 justify-start mt-8">
+                {prj.techTags.map((tag, index) => (
+                  <span key={`${tag}-${index}`} className="text-xs rounded-full px-4 py-1 dark:bg-neutral-900 bg-neutral-200 cursor-default"> 
+                    {tag}
+                  </span>
+                ))}
+              </div>
             </div>
           ))}
         </div>
