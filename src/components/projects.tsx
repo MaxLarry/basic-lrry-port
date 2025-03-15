@@ -4,6 +4,7 @@ import React from "react";
 import { CardAnimation } from "./ui/cardAnimation";
 import { graphics } from "../lib/data";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 type TryData = {
   name: string;
@@ -94,22 +95,24 @@ const projects = () => {
         </p>
         <div className="grid grid-cols-8 auto-rows-auto gap-1 lg:gap-3 mb-10">
           {graphics.map((prj, index) => (
-            <div
+            <motion.div
               className="relative object-cover rounded-lg"
               key={`${prj.name} - ${index}`}
               style={{
                 gridColumn: `${prj.position.colStart} / ${prj.position.colEnd}`,
                 gridRow: `${prj.position.rowStart} / ${prj.position.rowEnd}`,
               }}
+              whileHover={{ scale: 0.95}}
+              transition={{ duration: 0.3, ease: "easeOut" }}
             >
               <Image
                 src={prj.src}
                 width={0}
                 height={0}
                 alt={prj.alt}
-                className="w-full h-full object-cover lg:rounded-lg rounded-sm"
+                className="w-full h-full object-cover lg:rounded-lg rounded-md"
               />
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
