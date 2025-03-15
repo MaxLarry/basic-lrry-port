@@ -3,6 +3,7 @@ import Header from "../components/header";
 import Hero from "../components/hero";
 import TechStack from "../components/techStack";
 import Projects from "../components/projects";
+import Quotes from "../components/quotes";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
         <Hero />
         <TechStack />
         <Projects />
+        <Quotes/>
         <Footer />
       </div>
     </div>

@@ -497,3 +497,11 @@ main#home .header-image.mobile {
   position: relative;
   border-radius: 100%;
 }
+
+.vertical-stripe {
+  height: clamp(80px, 5vw, 100px);
+  width: 1px;
+  opacity: 0.6;
+  position: relative;
+  border-radius: 100%;
+}
