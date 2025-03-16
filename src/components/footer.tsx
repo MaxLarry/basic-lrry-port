@@ -2,10 +2,12 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  
+  const [isHovered, setIsHovered] = useState(false);
+
   const messages = ["Get in touch", "Click to copy"];
   return (
     <footer className=" py-0">
@@ -14,17 +16,36 @@ const Footer = () => {
       <div className="section-footer">
         <div className="prefooter">
           <div className="section-title-labels footer-title">
-            <div className="label message">get in touch</div>
-            <div className="label message">click to copy</div>
+            <motion.div
+              className="label message transition-transform duration-300 ease-in-out"
+              style={{
+                transform: isHovered ? "translateY(-100%)" : "translateY(0%)",
+              }}
+            >
+              let's work together
+            </motion.div>
+            <motion.div
+              className="label message transition-transform duration-300 ease-in-out"
+              style={{
+                transform: isHovered ? "translateY(-100%)" : "translateY(0%)",
+              }}
+            >
+              click to send Message
+            </motion.div>
           </div>
           <div className="relative items-center flex justify-center w-full">
-            <div className="text-center py-4 px-8 relative cursor-pointer bg-black/5 rounded-[16px] hover:scale-95 transition-all ease-in-out">
-              <h1 className="uppercase">Let's Work Together</h1>
-              <p className="opacity-60">
+            <Link
+              className="message-box text-center py-4 px-8 relative cursor-pointer bg-black/5 rounded-[16px] hover:scale-95 transition-transform duration-500 ease-in-out"
+              href={'/message-me'}
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+            >
+              <h1 className="uppercase">Send me a Message</h1>
+              <p className="small opacity-60">
                 "Break free, create without boundaries"
               </p>
               <div className="opacity-[0.26] border border-dashed border-black dark:border-white rounded-[16px] w-full h-full absolute inset-0"></div>
-            </div>
+            </Link>
           </div>
         </div>
       </div>
@@ -46,7 +67,7 @@ const Footer = () => {
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
-                  aria-label="Follow us on LinkedIn"
+                  aria-label="Follow us on Twitter"
                 >
                   <path d="M22.459,5.5a8.763,8.763,0,0,1-2.471.678A4.337,4.337,0,0,0,21.88,3.794,8.907,8.907,0,0,1,19.144,4.83,4.3,4.3,0,0,0,11.7,7.768a4.446,4.446,0,0,0,.111.983A12.194,12.194,0,0,1,2.935,4.266a4.226,4.226,0,0,0-.582,2.166,4.307,4.307,0,0,0,1.914,3.584,4.292,4.292,0,0,1-1.949-.539V9.53A4.306,4.306,0,0,0,5.77,13.753a4.342,4.342,0,0,1-1.935.075,4.318,4.318,0,0,0,4.028,2.989,8.629,8.629,0,0,1-5.339,1.842A9.277,9.277,0,0,1,1.5,18.6a12.254,12.254,0,0,0,6.613,1.932A12.159,12.159,0,0,0,20.361,8.3c0-.183,0-.367-.013-.551A8.69,8.69,0,0,0,22.5,5.516Z"></path>
                 </svg>
