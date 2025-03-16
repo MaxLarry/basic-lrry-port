@@ -1,21 +1,31 @@
 "use client";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  
+  const messages = ["Get in touch", "Click to copy"];
   return (
     <footer className=" py-0">
-      <div className="stripe dark:bg-white/30 bg-gray-800">
-      </div>
-      <div className="section-footer prefooter">
-        <div className="wrap-wide">
-          {/* Left Section */}
-          <div className="text-center">
-            <h1 className="uppercase">Let's Work Together</h1>
-            <p className="opacity-60">"Break free, create without boundaries"</p>
-          </div>
+      <div className="stripe dark:bg-white/30 bg-gray-800"></div>
 
+      <div className="section-footer">
+        <div className="prefooter">
+          <div className="section-title-labels footer-title">
+            <div className="label message">get in touch</div>
+            <div className="label message">click to copy</div>
+          </div>
+          <div className="relative items-center flex justify-center w-full">
+            <div className="text-center py-4 px-8 relative cursor-pointer bg-black/5 rounded-[16px] hover:scale-95 transition-all ease-in-out">
+              <h1 className="uppercase">Let's Work Together</h1>
+              <p className="opacity-60">
+                "Break free, create without boundaries"
+              </p>
+              <div className="opacity-[0.26] border border-dashed border-black dark:border-white rounded-[16px] w-full h-full absolute inset-0"></div>
+            </div>
+          </div>
         </div>
       </div>
 
