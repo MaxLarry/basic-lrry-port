@@ -5,7 +5,7 @@ import { minetechnStack, designStack } from "@/src/lib/data";
 import Image from "next/image";
 import { CardAnimation, BoxGlow } from "@/src/components/ui/cardAnimation";
 import { useTheme } from "next-themes";
-
+import { motion } from "motion/react";
 
 const techStack = () => {
   const { theme } = useTheme();
@@ -16,7 +16,22 @@ const techStack = () => {
   }, []); // Runs
 
   return (
-    <div className="section flex justify-center h-full">
+    <motion.div
+      initial={{
+        y: 25,
+        opacity: 0,
+      }}
+      animate={{
+        y: 0,
+        opacity: 1,
+      }}
+      transition={{
+        duration: 1.5,
+        delay: 0.1,
+        ease: "easeOut",
+      }}
+      className="section flex justify-center h-full"
+    >
       <div className="flex w-full items-center flex-col">
         <h1 className="uppercase mb-8">Tech Stack</h1>
         <div className="flex flex-col gap-10 items-center">
@@ -39,8 +54,8 @@ const techStack = () => {
                       : item.logo.light.src
                     : item.logo;
                 return (
-                  <BoxGlow key={index}>
-                    <CardAnimation/>
+                  <BoxGlow key={index}  delay={index * 0.2}>
+                    <CardAnimation />
                     <Image
                       src={logoSrc}
                       width={0}
@@ -71,8 +86,8 @@ const techStack = () => {
                       : item.logo.light.src
                     : item.logo;
                 return (
-                  <BoxGlow key={index}>
-                    <CardAnimation/>
+                  <BoxGlow key={index} delay={index * 0.2}>
+                    <CardAnimation />
                     <Image
                       src={logoSrc}
                       width={0}
@@ -89,7 +104,7 @@ const techStack = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

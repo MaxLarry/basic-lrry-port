@@ -3,6 +3,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import FollowMe from "@/src/img/essentials/./follow-me-lja-v3.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -10,7 +11,7 @@ const Footer = () => {
 
   const messages = ["Get in touch", "Click to copy"];
   return (
-    <footer className=" py-0">
+    <footer className=" py-0" id="contact">
       <div className="stripe dark:bg-white/30 bg-gray-800"></div>
 
       <div className="section-footer">
@@ -36,7 +37,7 @@ const Footer = () => {
           <div className="relative items-center flex justify-center w-full">
             <Link
               className="message-box text-center py-4 px-8 relative cursor-pointer bg-black/5 rounded-[16px] hover:scale-95 transition-transform duration-500 ease-in-out"
-              href={'/message-me'}
+              href={"/message-me"}
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
             >
@@ -63,16 +64,41 @@ const Footer = () => {
               </p>
             </div>
             <div className="social-icons social-hover ">
-              <a href="#" className="social-ico twitter" target="_blank">
+              <Link href="/" className="social-ico facebook" target="">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  aria-label="Follow us on Twitter"
+                  viewBox="0 0 36 36"
+                  fill="url(#a)"
                 >
-                  <path d="M22.459,5.5a8.763,8.763,0,0,1-2.471.678A4.337,4.337,0,0,0,21.88,3.794,8.907,8.907,0,0,1,19.144,4.83,4.3,4.3,0,0,0,11.7,7.768a4.446,4.446,0,0,0,.111.983A12.194,12.194,0,0,1,2.935,4.266a4.226,4.226,0,0,0-.582,2.166,4.307,4.307,0,0,0,1.914,3.584,4.292,4.292,0,0,1-1.949-.539V9.53A4.306,4.306,0,0,0,5.77,13.753a4.342,4.342,0,0,1-1.935.075,4.318,4.318,0,0,0,4.028,2.989,8.629,8.629,0,0,1-5.339,1.842A9.277,9.277,0,0,1,1.5,18.6a12.254,12.254,0,0,0,6.613,1.932A12.159,12.159,0,0,0,20.361,8.3c0-.183,0-.367-.013-.551A8.69,8.69,0,0,0,22.5,5.516Z"></path>
+                  <defs>
+                    <linearGradient
+                      x1="50%"
+                      x2="50%"
+                      y1="97.078%"
+                      y2="0%"
+                      id="a"
+                    >
+                      <stop offset="0%" stop-color="#0062E0" />
+                      <stop offset="100%" stop-color="#19AFFF" />
+                    </linearGradient>
+                  </defs>
+                  <path
+                  fill="#000000"
+                    className="circle"
+                    d="M15 35.8C6.5 34.3 0 26.9 0 18 0 8.1 8.1 0 18 0s18 8.1 18 18c0 8.9-6.5 16.3-15 17.8l-1-.8h-4l-1 .8z"
+                  />
+                  <path
+                    className="facebook"
+                    fill="#ffff"
+                    d="m25 23 .8-5H21v-3.5c0-1.4.5-2.5 2.7-2.5H26V7.4c-1.3-.2-2.7-.4-4-.4-4.1 0-7 2.5-7 7v4h-4.5v5H15v12.7c1 .2 2 .3 3 .3s2-.1 3-.3V23h4z"
+                  />
                 </svg>
-              </a>
-              <a href="#" className="social-ico instagram" target="_blank">
+              </Link>
+              <Link
+                href="https://www.instagram.com/larrevision"
+                className="social-ico instagram"
+                target="_blank"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -82,8 +108,8 @@ const Footer = () => {
                   <path d="M12,6.865A5.135,5.135,0,1,0,17.135,12,5.135,5.135,0,0,0,12,6.865Zm0,8.468A3.333,3.333,0,1,1,15.333,12,3.333,3.333,0,0,1,12,15.333Z"></path>
                   <circle cx="17.338" cy="6.662" r="1.2"></circle>
                 </svg>
-              </a>
-              <a
+              </Link>
+              <Link
                 href="#"
                 className="social-ico linkedin"
                 target="_blank"
@@ -92,14 +118,15 @@ const Footer = () => {
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                   <path d="M20.9,20.9H17.166V15.053c0-1.394-.028-3.188-1.944-3.188-1.945,0-2.242,1.517-2.242,3.085V20.9H9.249V8.877h3.584v1.639h.048a3.932,3.932,0,0,1,3.538-1.942c3.78,0,4.479,2.488,4.479,5.726v6.6ZM5.036,7.232A2.167,2.167,0,1,1,7.2,5.064,2.165,2.165,0,0,1,5.036,7.232ZM6.906,20.9H3.165V8.877H6.906Z"></path>
                 </svg>
-              </a>
+              </Link>
               <Image
                 className="social-sticker"
-                data-src="https://onenil.com/assets/img/OneNil_2021_Sticker_VOL1_FOLLOW.png"
-                src="https://onenil.com/assets/img/OneNil_2021_Sticker_VOL1_FOLLOW.png"
-                height={100}
-                width={100}
-                alt="Follow us"
+                src={FollowMe}
+                alt="follow-me-larry"
+                loading="lazy"
+                height={600}
+                width={600}
+                unoptimized
               />
             </div>
           </div>

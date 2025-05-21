@@ -6,15 +6,16 @@ import Image from "next/image";
 import LrryJhn from "@/src/img/LJA_icon.svg";
 import ThSwitch from "./toggleSwitch";
 import { Menu } from "lucide-react";
-import {motion} from "framer-motion";
+import { motion } from "framer-motion";
 
 const header = () => {
   return (
-    <motion.header 
-    // initial={{ y: -50, opacity: 0 }} // Start position above screen
-    // animate={{ y: 0, opacity: 1 }} // Animate to normal position
-    // transition={{ type: "spring", stiffness: 50, damping: 10 }}
-    className="fixed top-0 left-0 right-0 z-50 px-4 py-2 lg:py-4">
+    <motion.header
+      initial={{ y: -50, opacity: 0 }} // Start position above screen
+      animate={{ y: 0, opacity: 1 }} // Animate to normal position
+      transition={{ type: "spring", stiffness: 20, damping: 10 }}
+      className="fixed top-0 left-0 right-0 z-50 px-4 py-2 lg:py-4"
+    >
       <div className="max-w-7xl mx-auto bg-white/10 dark:bg-black/50 backdrop-blur-md rounded-2xl border dark:border-white/10 border-black/10">
         <div className="flex justify-between items-center h-14 py-0 lg:py-2 lg:h-16 px-4 lg:px-8">
           <div className="flex items-center cursor-pointer">
@@ -87,7 +88,9 @@ const header = () => {
               Contacts
             </Link>
           </div>
-          <div className="hidden md:flex"><ThSwitch/></div>
+          <div className="hidden md:flex">
+            <ThSwitch />
+          </div>
           <div className="md:hidden flex cursor-pointer">
             <Menu></Menu>
           </div>
