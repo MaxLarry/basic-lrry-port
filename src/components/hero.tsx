@@ -15,7 +15,7 @@ const hero = () => {
   const handleCopy = () => {
     navigator.clipboard.writeText(email).then(() => {
       setCopied(true);
-      toast.success(`Email Copied: ${email}`, {
+      toast.success(`EMAIL COPIED: ${email}`, {
         description: 'You can now send me an email' ,
       });
 

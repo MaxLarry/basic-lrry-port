@@ -8,6 +8,9 @@ import FollowMe from "@/src/img/essentials/./follow-me-lja-v3.png";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const [isHovered, setIsHovered] = useState(false);
+  const instagramLink = "https://www.instagram.com/larrevision";
+  const facebookLink = "https://www.facebook.com/profile.php?id=100086583787043";
+  const linkedinLink = "https://www.linkedin.com/in/larry-john-andonga-674080278/";
 
   const messages = ["Get in touch", "Click to copy"];
   return (
@@ -64,7 +67,11 @@ const Footer = () => {
               </p>
             </div>
             <div className="social-icons social-hover ">
-              <Link href="/" className="social-ico facebook" target="">
+              <Link
+                href={facebookLink}
+                className="social-ico facebook"
+                target="_blank"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 36 36"
@@ -83,7 +90,7 @@ const Footer = () => {
                     </linearGradient>
                   </defs>
                   <path
-                  fill="#000000"
+                    fill="#000000"
                     className="circle"
                     d="M15 35.8C6.5 34.3 0 26.9 0 18 0 8.1 8.1 0 18 0s18 8.1 18 18c0 8.9-6.5 16.3-15 17.8l-1-.8h-4l-1 .8z"
                   />
@@ -95,7 +102,7 @@ const Footer = () => {
                 </svg>
               </Link>
               <Link
-                href="https://www.instagram.com/larrevision"
+                href={instagramLink}
                 className="social-ico instagram"
                 target="_blank"
               >
@@ -110,7 +117,7 @@ const Footer = () => {
                 </svg>
               </Link>
               <Link
-                href="#"
+                href={linkedinLink}
                 className="social-ico linkedin"
                 target="_blank"
                 aria-label="Follow us on LinkedIn"

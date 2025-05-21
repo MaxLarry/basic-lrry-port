@@ -16,6 +16,7 @@ export default {
         "larry-bold": ["Larry-Bold", "sans-serif"],
         "larry-extrabold": ["Larry-ExtraBold", "sans-serif"],
         syne: ["Syne-Regular", "sans-serif"],
+        krona: ["Krona-Regular", "sans-serif"],
       },
       colors: {
         background: "var(--background)",
