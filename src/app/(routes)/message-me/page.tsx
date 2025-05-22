@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import LrryJhn from "@/src/img/LJA_icon.svg";
+import { motion } from "framer-motion";
 import {
   Card,
   CardContent,
@@ -58,7 +59,12 @@ const messageMe = () => {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <div className="w-full px-6 py-6 flex justify-center">
+      <motion.div
+        initial={{ y: -50, opacity: 0 }} // Start position above screen
+        animate={{ y: 0, opacity: 1 }} // Animate to normal position
+        transition={{ type: "spring", stiffness: 20, damping: 10 }}
+        className="w-full px-6 py-6 flex justify-center"
+      >
         <Link href="/" className="flex justify-center items-center gap-4">
           <Image
             src={LrryJhn}
@@ -70,8 +76,24 @@ const messageMe = () => {
           ></Image>
           <h2 className="medium font-krona uppercase">lrry jhn</h2>
         </Link>
-      </div>
-      <div className="flex justify-center min-h-full py-5  my-auto px-4 sm:px-6 lg:px-8">
+      </motion.div>
+      <motion.div
+        initial={{
+          y: 25,
+          opacity: 0,
+        }}
+        viewport={{ once: true, amount: 0.5 }}
+        whileInView={{
+          y: 0,
+          opacity: 1,
+        }}
+        transition={{
+          duration: 1.5,
+          delay: 0.1,
+          ease: "easeOut",
+        }}
+        className="flex justify-center min-h-full py-5  my-auto px-4 sm:px-6 lg:px-8"
+      >
         <Card className="shadow-lg border-teal-700/20 dark:shadow-white/10 w-full sm:max-w-screen-lg p-0 lg:p-5">
           <CardHeader>
             <CardTitle className="lg:text-2xl text-xl uppercase font-black">
@@ -83,7 +105,7 @@ const messageMe = () => {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <div className="flex flex-row lg:gap-10 gap-5 justify-center ">
+            <div className="flex lg:flex-row flex-col lg:gap-10 gap-5 justify-center ">
               <div className="w-full">
                 {" "}
                 <Textarea placeholder="Type your message here." />
@@ -147,7 +169,7 @@ const messageMe = () => {
             </div>
           </CardContent>
         </Card>
-      </div>
+      </motion.div>
     </div>
   );
 };

@@ -21,6 +21,10 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
       },
     },
   },
