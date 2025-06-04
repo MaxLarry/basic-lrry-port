@@ -28,6 +28,8 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { Toaster } from "@/components/ui/sonner";
+import { toast } from "sonner";
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -40,21 +42,59 @@ const messageSchema = z.object({
     .string()
     .min(1, "Email is required")
     .regex(emailRegex, "Enter a valid email address"),
+  message: z.string().min(5, "Message is required"),
 });
 
 const messageMe = () => {
   const [email, setEmail] = useState("");
+  const [isSending, setIsSending] = useState(false);
   const form = useForm<MessageFormData>({
     resolver: zodResolver(messageSchema),
     defaultValues: {
       firstName: "",
       lastName: "",
       email: "",
+      message: "",
     },
   });
-  const onSubmit = (data: MessageFormData) => {
-    console.log("Form Data:", data);
-    // Add your send logic here
+  const { reset } = form;
+  const onSubmit = async (data: MessageFormData) => {
+    setIsSending(true);
+    try {
+      const response = await fetch("https://formspree.io/f/mqabaqpo", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          firstName: data.firstName,
+          lastName: data.lastName,
+          email: data.email,
+          message: data.message,
+        }),
+      });
+
+      if (response.ok) {
+        // console.log("Message sent successfully.");
+        reset();
+        toast.success("SEND MESSAGE", {
+          description: "Your message being sent to this handsome guy.",
+        });
+        // optionally show a success message or clear form
+      } else {
+        // console.error("Failed to send message.");
+        toast.error("SEND FAILED", {
+          description: "Something went wrong. Try again later.",
+        });
+      }
+    } catch (error) {
+      // console.error("Error submitting form:", error);
+      toast.error("SEND ERROR", {
+        description: "Unable to send message.",
+      });
+    } finally {
+      setIsSending(false);
+    }
   };
 
   return (
@@ -108,7 +148,23 @@ const messageMe = () => {
             <div className="flex lg:flex-row flex-col lg:gap-10 gap-5 justify-center ">
               <div className="w-full">
                 {" "}
-                <Textarea placeholder="Type your message here." />
+                <Form {...form}>
+                  <FormField
+                    control={form.control}
+                    name="message"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormControl>
+                          <Textarea
+                            {...field}
+                            placeholder="Type your message here."
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                </Form>
               </div>
               <div className="w-full">
                 <Form {...form}>
@@ -161,7 +217,12 @@ const messageMe = () => {
                       )}
                     />
                     <div className="">
-                      <Button className="w-full mt-6">Submit</Button>
+                      <Button disabled={isSending} className="w-full mt-6">
+                        {isSending && (
+                          <div className="w-5 h-5 border-4 border-gray-300 border-t-black rounded-full animate-spin" />
+                        )}
+                        {isSending ? "Sending..." : "Submit"}
+                      </Button>
                     </div>
                   </form>
                 </Form>
@@ -170,6 +231,7 @@ const messageMe = () => {
           </CardContent>
         </Card>
       </motion.div>
+      <Toaster />
     </div>
   );
 };

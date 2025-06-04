@@ -16,40 +16,41 @@ type TryData = {
 const tryData: TryData = [
   {
     name: "Mannavision",
-    desc: "Automated attendance system that can recognize faces and check if they are wearing masks. Features real-time detection, attendance logging, and reporting capabilities for schools and offices.",
-    techTags: ["React", "NodeJS", "MongoDB"],
-    links: "itoooo",
+    desc: "A portfolio website built for static use to showcase multimedia projects. It also offers services like video editing, graphic design, photo manipulation, and social media management.",
+    techTags: ["PWA", "HTML", "CSS", "JavaScript"],
+    links: "#",
   },
   {
-    name: "Bakanaman",
-    desc: "Automated attendance system that can recognize faces and check if they are wearing masks. Features real-time detection, attendance logging, and reporting capabilities for schools and offices.",
-    techTags: ["React", "NodeJS", "MongoDB"],
-    links: "itoooo",
+    name: "PalaWonder",
+    desc: "A blogsite for travelers who love exploring Palawan, Philippines. Users can write blogs, share experiences, and showcase hidden gems that make Palawan worth visiting.",
+    techTags: ["Next.js", "Supabase", "TypeScript", "Tailwind"],
+    links: "#",
   },
   {
-    name: "Voice",
-    desc: "Automated attendance system that can recognize faces and check if they are wearing masks. Features real-time detection, attendance logging, and reporting capabilities for schools and offices.",
-    techTags: ["React", "NodeJS", "MongoDB"],
-    links: "itoooo",
+    name: "RentConnect-Admin",
+    desc: "The admin dashboard for RentConnect. It helps manage property listings, users, safety compliance, messages, and system activity. Designed to monitor and control the platform efficiently.",
+    techTags: ["React", "Node.js", "MongoDB", "Tailwind"],
+    links: "#",
   },
   {
-    name: "Voice",
+    name: "FireApp",
     desc: "Automated attendance system that can recognize faces and check if they are wearing masks. Features real-time detection, attendance logging, and reporting capabilities for schools and offices.",
     techTags: ["React", "NodeJS", "MongoDB"],
-    links: "itoooo",
+    links: "#",
   },
   {
-    name: "Voice",
-    desc: "Automated attendance system that can recognize faces and check if they are wearing masks. Features real-time detection, attendance logging, and reporting capabilities for schools and offices.",
-    techTags: ["React", "NodeJS", "MongoDB"],
-    links: "itoooo",
+    name: "My Fancy Portfolio",
+    desc: "An unfinished personal portfolio project started in late 2023. Meant to showcase projects, skills, and creative work with smooth animations and a modern layout.",
+    techTags: ["React JS", "GSAP", "Lenis", "Tailwind"],
+    links: "#",
   },
-  {
-    name: "Voice",
-    desc: "Automated attendance system that can recognize faces and check if they are wearing masks. Features real-time detection, attendance logging, and reporting capabilities for schools and offices.",
-    techTags: ["React", "NodeJS", "MongoDB"],
-    links: "itoooo",
-  },
+{
+  name: "E-commerce Site",
+  desc: "A personal project that builds an online store with an admin panel. Designed for business owners to manage products, sales, and customers easily.",
+  techTags: ["Next.js", "Supabase", "Tailwind",],
+  links: "#",
+}
+
 ];
 
 const projects = () => {

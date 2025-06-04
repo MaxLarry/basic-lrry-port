@@ -9,19 +9,33 @@ import { toast } from "sonner";
 
 const hero = () => {
   const [copied, setCopied] = useState(false);
+  const [disabled, setDisabled] = useState(false);
 
   const email = "larryjohnadonga.dev@gmail.com";
 
-  const handleCopy = () => {
-    navigator.clipboard.writeText(email).then(() => {
-      setCopied(true);
-      toast.success(`EMAIL COPIED: ${email}`, {
-        description: 'You can now send me an email' ,
-      });
+const handleCopy = () => {
+  if (disabled) return;
 
-      setTimeout(() => setCopied(false), 3000);
+  setDisabled(true);
+
+  navigator.clipboard.writeText(email).then(() => {
+    setCopied(true);
+    toast.success(`EMAIL COPIED: ${email}`, {
+      description: "You can now send me an email",
     });
-  };
+
+    // Reset after 3 seconds
+    setTimeout(() => {
+      setCopied(false);
+      setDisabled(false);
+    }, 5000);
+  }).catch(() => {
+    // Optional: handle error
+    setDisabled(false);
+    toast.error("Failed to copy email");
+  });
+};
+
 
   return (
     <div className="section flex items-center h-[550px]" id="home">
@@ -135,12 +149,15 @@ const hero = () => {
           >
             <Copy className="w-4"></Copy> Copy Email
           </span>
-          <Link className=" button button-link non-prim gap-2" href="/login">
+          <Link
+            className=" button button-link non-prim gap-2"
+            href="/message-me"
+          >
             <Plus className="w-4"></Plus> Hire me
           </Link>
         </motion.div>
       </div>
-      <Toaster  />
+      <Toaster />
     </div>
   );
 };
