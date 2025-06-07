@@ -1,18 +1,25 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import FollowMe from "@/src/img/essentials/./follow-me-lja-v3.png";
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear();
   const [isHovered, setIsHovered] = useState(false);
   const instagramLink = "https://www.instagram.com/larrevision";
-  const facebookLink = "https://www.facebook.com/profile.php?id=100086583787043";
-  const linkedinLink = "https://www.linkedin.com/in/larry-john-andonga-674080278/";
+  const facebookLink =
+    "https://www.facebook.com/profile.php?id=100086583787043";
+  const linkedinLink =
+    "https://www.linkedin.com/in/larry-john-andonga-674080278/";
 
   const messages = ["Get in touch", "Click to copy"];
+
+  const [year, setYear] = useState<number | null>(null);
+
+  useEffect(() => {
+    setYear(new Date().getFullYear());
+  }, []);
   return (
     <footer className=" py-0" id="contact">
       <div className="stripe dark:bg-white/30 bg-gray-800"></div>
@@ -21,12 +28,11 @@ const Footer = () => {
         <div className="prefooter">
           <div className="section-title-labels footer-title">
             <motion.div
-              className="label message transition-transform duration-300 ease-in-out"
-              style={{
-                transform: isHovered ? "translateY(-100%)" : "translateY(0%)",
-              }}
+              className="label message"
+              animate={{ y: isHovered ? "-100%" : "0%" }}
+              transition={{ duration: 0.3 }}
             >
-              let's work together
+              Let's work together
             </motion.div>
             <motion.div
               className="label message transition-transform duration-300 ease-in-out"
@@ -61,8 +67,12 @@ const Footer = () => {
           <div className="footer-wrap">
             <div className="credits">
               <p className="small">
-                <a href="https:/larry-portry.vercel.app" target="_blanks">
-                  {currentYear} &copy; LarryJohn
+                <a
+                  href="https:/larry-portry.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {year ?? "..."} &copy; LarryJohn
                 </a>
               </p>
             </div>
@@ -84,10 +94,7 @@ const Footer = () => {
                       y1="97.078%"
                       y2="0%"
                       id="a"
-                    >
-                      <stop offset="0%" stop-color="#0062E0" />
-                      <stop offset="100%" stop-color="#19AFFF" />
-                    </linearGradient>
+                    ></linearGradient>
                   </defs>
                   <path
                     fill="#000000"

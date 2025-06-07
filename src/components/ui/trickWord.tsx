@@ -28,9 +28,9 @@ const TrickWords = ({ text }: { text: string }) => {
       viewport={{ once: true, amount: 0.3 }}
     >
       {words.map((word, i) => (
-        <motion.span key={i} variants={child}>
+        <motion.p className="small" key={i} variants={child}>
           {word}
-        </motion.span>
+        </motion.p>
       ))}
     </motion.div>
   );

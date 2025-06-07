@@ -22,8 +22,7 @@ const header = () => {
             <a href="/" title="logo">
               <Image
                 src={LrryJhn}
-                width={50}
-                height={50}
+                style={{ width: "40px", height: "auto" }}
                 alt="lrry logo"
                 loading="lazy"
                 className=""
@@ -44,6 +43,20 @@ const header = () => {
               offset={-100}
             >
               Home
+            </Link>
+            <Link
+              className="text-sm font-larry-semibold cursor-pointer"
+              activeClass="active"
+              to="contact"
+              spy={true}
+              smooth={true}
+              hashSpy={true}
+              duration={500}
+              isDynamic={true}
+              ignoreCancelEvents={false}
+              offset={-100}
+            >
+              About-me
             </Link>
             <Link
               className="text-sm font-larry-semibold cursor-pointer"

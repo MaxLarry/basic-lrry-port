@@ -35,7 +35,7 @@ const tryData: TryData = [
   {
     name: "FireApp",
     desc: "Automated attendance system that can recognize faces and check if they are wearing masks. Features real-time detection, attendance logging, and reporting capabilities for schools and offices.",
-    techTags: ["React", "NodeJS", "MongoDB"],
+    techTags: ["Python", "Django"],
     links: "#",
   },
   {

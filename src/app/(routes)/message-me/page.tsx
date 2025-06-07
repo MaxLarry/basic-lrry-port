@@ -98,7 +98,7 @@ const messageMe = () => {
   };
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen" suppressHydrationWarning={true}>
       <motion.div
         initial={{ y: -50, opacity: 0 }} // Start position above screen
         animate={{ y: 0, opacity: 1 }} // Animate to normal position
