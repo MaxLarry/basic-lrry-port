@@ -85,7 +85,7 @@ const MessageMe = () => {
           description: "Something went wrong. Try again later.",
         });
       }
-    } catch (error) {
+    } catch {
       // console.error("Error submitting form:", error);
       toast.error("SEND ERROR", {
         description: "Unable to send message.",
@@ -138,7 +138,7 @@ const MessageMe = () => {
               Send me a Message
             </CardTitle>
             <CardDescription>
-              Feel free to reach out—I'm open to new opportunities and
+              Feel free to reach out—I&apos;m open to new opportunities and
               collaborations.
             </CardDescription>
           </CardHeader>

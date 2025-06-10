@@ -50,7 +50,7 @@ const Footer = () => {
             >
               <h1 className="uppercase">Send me a Message</h1>
               <p className="small opacity-60">
-                "Break free, create without boundaries"
+                &quot;Break free, create without boundaries&quot;
               </p>
               <div className="opacity-[0.26] border border-dashed border-black dark:border-white rounded-[16px] w-full h-full absolute inset-0"></div>
             </Link>
