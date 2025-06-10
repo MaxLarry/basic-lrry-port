@@ -7,7 +7,6 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
@@ -21,7 +20,6 @@ import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -45,8 +43,8 @@ const messageSchema = z.object({
   message: z.string().min(5, "Message is required"),
 });
 
-const messageMe = () => {
-  const [email, setEmail] = useState("");
+const MessageMe = () => {
+  // const [email, setEmail] = useState("");
   const [isSending, setIsSending] = useState(false);
   const form = useForm<MessageFormData>({
     resolver: zodResolver(messageSchema),
@@ -98,7 +96,7 @@ const messageMe = () => {
   };
 
   return (
-    <div className="flex flex-col min-h-screen" suppressHydrationWarning={true}>
+    <div className="flex flex-col min-h-screen">
       <motion.div
         initial={{ y: -50, opacity: 0 }} // Start position above screen
         animate={{ y: 0, opacity: 1 }} // Animate to normal position
@@ -236,4 +234,4 @@ const messageMe = () => {
   );
 };
 
-export default messageMe;
+export default MessageMe;

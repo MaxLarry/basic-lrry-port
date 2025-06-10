@@ -53,7 +53,7 @@ const tryData: TryData = [
 
 ];
 
-const projects = () => {
+const Projects = () => {
   return (
     <div id="projects" className="section-project px-0 pb-32">
       <div className="flex flex-col justify-center">
@@ -151,4 +151,4 @@ const projects = () => {
   );
 };
 
-export default projects;
+export default Projects;

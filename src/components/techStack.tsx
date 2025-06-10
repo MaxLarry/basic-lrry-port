@@ -7,13 +7,13 @@ import { CardAnimation, BoxGlow } from "@/src/components/ui/cardAnimation";
 import { useTheme } from "next-themes";
 import { motion } from "motion/react";
 
-const techStack = () => {
+const TechStack = () => {
   const { theme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
-  }, []); // Runs
+  }, []); 
 
   return (
     <motion.div
@@ -108,4 +108,4 @@ const techStack = () => {
   );
 };
 
-export default techStack;
+export default TechStack;

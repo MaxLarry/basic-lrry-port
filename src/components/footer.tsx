@@ -13,8 +13,6 @@ const Footer = () => {
   const linkedinLink =
     "https://www.linkedin.com/in/larry-john-andonga-674080278/";
 
-  const messages = ["Get in touch", "Click to copy"];
-
   const [year, setYear] = useState<number | null>(null);
 
   useEffect(() => {
@@ -32,7 +30,7 @@ const Footer = () => {
               animate={{ y: isHovered ? "-100%" : "0%" }}
               transition={{ duration: 0.3 }}
             >
-              Let's work together
+              Let&apos;s work together
             </motion.div>
             <motion.div
               className="label message transition-transform duration-300 ease-in-out"

@@ -1,6 +1,7 @@
 "use client";
 
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
+import NextLink from "next/link";
 import React from "react";
 import Image from "next/image";
 import LrryJhn from "@/src/img/LJA_icon.svg";
@@ -8,7 +9,7 @@ import ThSwitch from "./toggleSwitch";
 import { Menu } from "lucide-react";
 import { motion } from "framer-motion";
 
-const header = () => {
+const Header = () => {
   return (
     <motion.header
       initial={{ y: -50, opacity: 0 }} // Start position above screen
@@ -19,15 +20,15 @@ const header = () => {
       <div className="max-w-7xl mx-auto bg-white/10 dark:bg-black/50 backdrop-blur-md rounded-2xl border dark:border-white/10 border-black/10">
         <div className="flex justify-between items-center h-14 py-0 lg:py-2 lg:h-16 px-4 lg:px-8">
           <div className="flex items-center cursor-pointer">
-            <a href="/" title="logo">
+            <NextLink href="/" title="Home">
               <Image
                 src={LrryJhn}
+                alt="Lrry Jhn logo"
                 style={{ width: "40px", height: "auto" }}
-                alt="lrry logo"
                 loading="lazy"
-                className=""
-              ></Image>
-            </a>
+                className="h-auto"
+              />
+            </NextLink>
           </div>
           <div className="hidden md:flex items-center gap-4 uppercase">
             <Link
@@ -113,4 +114,4 @@ const header = () => {
   );
 };
 
-export default header;
+export default Header;

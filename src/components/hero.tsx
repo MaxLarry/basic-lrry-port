@@ -7,35 +7,34 @@ import { motion } from "framer-motion";
 import { Toaster } from "@/components/ui/sonner";
 import { toast } from "sonner";
 
-const hero = () => {
-  const [copied, setCopied] = useState(false);
+const Hero = () => {
   const [disabled, setDisabled] = useState(false);
 
   const email = "larryjohnadonga.dev@gmail.com";
 
-const handleCopy = () => {
-  if (disabled) return;
+  const handleCopy = () => {
+    if (disabled) return;
 
-  setDisabled(true);
+    setDisabled(true);
 
-  navigator.clipboard.writeText(email).then(() => {
-    setCopied(true);
-    toast.success(`EMAIL COPIED: ${email}`, {
-      description: "You can now send me an email",
-    });
+    navigator.clipboard
+      .writeText(email)
+      .then(() => {
+        toast.success(`EMAIL COPIED: ${email}`, {
+          description: "You can now send me an email",
+        });
 
-    // Reset after 3 seconds
-    setTimeout(() => {
-      setCopied(false);
-      setDisabled(false);
-    }, 5000);
-  }).catch(() => {
-    // Optional: handle error
-    setDisabled(false);
-    toast.error("Failed to copy email");
-  });
-};
-
+        // Reset after 3 seconds
+        setTimeout(() => {
+          setDisabled(false);
+        }, 5000);
+      })
+      .catch(() => {
+        // Optional: handle error
+        setDisabled(false);
+        toast.error("Failed to copy email");
+      });
+  };
 
   return (
     <div className="section flex items-center h-[550px]" id="home">
@@ -59,7 +58,7 @@ const handleCopy = () => {
           }}
           className="flex items-center gap-4"
         >
-          <p className="">Hi, I'm Larry John.</p>
+          <p className="">Hi, I&aposm Larry John.</p>
           <div className="inline-flex w-fit items-center rounded-full bg-black dark:bg-white text-center px-3 py-1 text-sm font-medium">
             <span className="relative flex h-2 w-2 mr-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
@@ -119,7 +118,7 @@ const handleCopy = () => {
           }}
         >
           <p className="small">
-            I'm a software developer and graphic designer passionate about
+            I&aposm a software developer and graphic designer passionate about
             building scalable, user-friendly applications and crafting visually
             compelling designs that enhance digital experiences.
           </p>
@@ -162,4 +161,4 @@ const handleCopy = () => {
   );
 };
 
-export default hero;
+export default Hero;

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { ReactNode, useEffect, useRef, useState } from "react";
+import React, { ReactNode, useEffect, useRef } from "react";
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
 interface BoxGlowProps {
   children: ReactNode;
@@ -28,7 +28,7 @@ export const CardAnimation = () => {
     return () => {
       window.removeEventListener("mousemove", updateMousePosition);
     };
-  }, []);
+  }, [offsetX, offsetY]);
 
   return (
     <motion.div

@@ -4,7 +4,7 @@ import { Sun, Moon } from "lucide-react";
 import React, { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 
-const toggleSwitch = () => {
+const ToggleSwitch = () => {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
@@ -25,4 +25,4 @@ const toggleSwitch = () => {
   );
 };
 
-export default toggleSwitch;
+export default ToggleSwitch;

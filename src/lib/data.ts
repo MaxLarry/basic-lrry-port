@@ -26,7 +26,6 @@ import jordan from "@/src/img/graphics/Jordan_shoe.png";
 import wemby from "@/src/img/graphics/wemby.png";
 import wembyAlien from "@/src/img/graphics/wemAlien.png";
 import lrryGrain from "@/src/img/graphics/lrry_grain.jpg";
-import travel from "@/src/img/graphics/TRAVEL.png";
 import zeus from "@/src/img/graphics/zeus.png";
 
 export const minetechnStack = [
