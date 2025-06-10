@@ -99,34 +99,34 @@ export const designStack = [
   },
 ];
 
-const otherTechStack = [
-  {
-    name: "Node.js",
-    logo: firebaseLogo,
-    description: "babu",
-  },
-  {
-    name: "Express",
-    logo: firebaseLogo,
-    description: "babu",
-  },
-  {
-    name: "MongoDb",
-    logo: firebaseLogo,
-    description: "babu",
-  },
-  {
-    name: "C#",
-    logo: firebaseLogo,
-    description: "babu",
-  },
-  ,
-  {
-    name: ".Net",
-    logo: firebaseLogo,
-    description: "babu",
-  },
-];
+// export const otherTechStack = [
+//   {
+//     name: "Node.js",
+//     logo: firebaseLogo,
+//     description: "babu",
+//   },
+//   {
+//     name: "Express",
+//     logo: firebaseLogo,
+//     description: "babu",
+//   },
+//   {
+//     name: "MongoDb",
+//     logo: firebaseLogo,
+//     description: "babu",
+//   },
+//   {
+//     name: "C#",
+//     logo: firebaseLogo,
+//     description: "babu",
+//   },
+//   ,
+//   {
+//     name: ".Net",
+//     logo: firebaseLogo,
+//     description: "babu",
+//   },
+// ];
 
 export const graphics = [
   {
