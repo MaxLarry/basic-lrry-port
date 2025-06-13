@@ -52,9 +52,8 @@ const tryData: TryData = [
   },
 ];
 
-const [modal, setModal] = useState({ active: false, index: 0 });
-
 const Projects = () => {
+  const [modal, setModal] = useState({ active: false, index: 0 });
   return (
     <div id="projects" className="section-project px-0 pb-32">
       <div className="flex flex-col justify-center">
