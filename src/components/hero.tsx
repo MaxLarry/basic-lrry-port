@@ -58,7 +58,7 @@ const Hero = () => {
           }}
           className="flex items-center gap-4"
         >
-          <p className="">Hi, I&aposm Larry John.</p>
+          <p className="">Hi, I&apos;m Larry John.</p>
           <div className="inline-flex w-fit items-center rounded-full bg-black dark:bg-white text-center px-3 py-1 text-sm font-medium">
             <span className="relative flex h-2 w-2 mr-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
@@ -118,7 +118,7 @@ const Hero = () => {
           }}
         >
           <p className="small">
-            I&aposm a software developer and graphic designer passionate about
+            I&apos;m a software developer and graphic designer passionate about
             building scalable, user-friendly applications and crafting visually
             compelling designs that enhance digital experiences.
           </p>

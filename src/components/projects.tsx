@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { CardAnimation } from "./ui/cardAnimation";
 import { graphics } from "../lib/data";
 import Image from "next/image";
@@ -44,14 +44,15 @@ const tryData: TryData = [
     techTags: ["React JS", "GSAP", "Lenis", "Tailwind"],
     links: "#",
   },
-{
-  name: "E-commerce Site",
-  desc: "A personal project that builds an online store with an admin panel. Designed for business owners to manage products, sales, and customers easily.",
-  techTags: ["Next.js", "Supabase", "Tailwind",],
-  links: "#",
-}
-
+  {
+    name: "E-commerce Site",
+    desc: "A personal project that builds an online store with an admin panel. Designed for business owners to manage products, sales, and customers easily.",
+    techTags: ["Next.js", "Supabase", "Tailwind"],
+    links: "#",
+  },
 ];
+
+const [modal, setModal] = useState({ active: false, index: 0 });
 
 const Projects = () => {
   return (
@@ -89,6 +90,9 @@ const Projects = () => {
               whileInView={{ x: 0, y: 0, opacity: 1 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true, amount: 0.3 }}
+              onMouseEnter={() => {
+                setModal({ active: true, index: index });
+              }}
               className="relative p-5 w-full h-full gap-2 items-center dark:bg-neutral-950/70 bg-neutral-100 rounded-lg"
             >
               <CardAnimation />
