@@ -184,3 +184,13 @@ export const graphics = [
     position: { colStart: 3, colEnd: 4, rowStart: 3, rowEnd: 5 },
   },
 ];
+
+
+
+export const sections = [
+  { id: "home", label: "Home" },
+  { id: "/under-maintenance", label: "About-me" },
+  { id: "projects", label: "Projects" },
+  { id: "/under-maintenance", label: "Services" },
+  { id: "contact", label: "Contacts" },
+];

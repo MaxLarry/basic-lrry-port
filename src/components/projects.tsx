@@ -53,7 +53,7 @@ const tryData: TryData = [
 ];
 
 const Projects = () => {
-  const [modal, setModal] = useState({ active: false, index: 0 });
+  // const [modal, setModal] = useState({ active: false, index: 0 });
   return (
     <div id="projects" className="section-project px-0 pb-32">
       <div className="flex flex-col justify-center">
@@ -89,9 +89,7 @@ const Projects = () => {
               whileInView={{ x: 0, y: 0, opacity: 1 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true, amount: 0.3 }}
-              onMouseEnter={() => {
-                setModal({ active: true, index: index });
-              }}
+             
               className="relative p-5 w-full h-full gap-2 items-center dark:bg-neutral-950/70 bg-neutral-100 rounded-lg"
             >
               <CardAnimation />
