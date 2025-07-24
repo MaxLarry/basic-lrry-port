@@ -2,7 +2,7 @@
 
 import { Link } from "react-scroll";
 import NextLink from "next/link";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import LrryJhn from "@/src/img/LJA_icon.svg";
 import ThSwitch from "./toggleSwitch";

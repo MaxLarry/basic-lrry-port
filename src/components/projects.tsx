@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import { CardAnimation } from "./ui/cardAnimation";
 import { graphics } from "../lib/data";
 import Image from "next/image";
@@ -53,7 +53,7 @@ const tryData: TryData = [
 ];
 
 const Projects = () => {
-  // const [modal, setModal] = useState({ active: false, index: 0 });
+  
   return (
     <div id="projects" className="section-project px-0 pb-32">
       <div className="flex flex-col justify-center">
