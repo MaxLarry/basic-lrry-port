@@ -20,9 +20,9 @@ const tryData: TryData = [
     techTags: ["PWA", "HTML", "CSS", "JavaScript"],
     links: "#",
   },
-    {
+  {
     name: "Lifesaver's Booking System",
-    desc: "A blogsite for travelers who love exploring Palawan, Philippines. Users can write blogs, share experiences, and showcase hidden gems that make Palawan worth visiting.",
+    desc: "A drug testing appointment system where users can schedule tests, and admins manage bookings. Each appointment is automatically stored in an Excel file using the Excel API for easy tracking and reporting.",
     techTags: ["Next.js", "Supabase", "TypeScript", "Tailwind"],
     links: "#",
   },
@@ -59,7 +59,6 @@ const tryData: TryData = [
 ];
 
 const Projects = () => {
-  
   return (
     <div id="projects" className="section-project px-0 pb-32">
       <div className="flex flex-col justify-center">
@@ -95,7 +94,6 @@ const Projects = () => {
               whileInView={{ x: 0, y: 0, opacity: 1 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true, amount: 0.3 }}
-             
               className="relative p-5 w-full h-full gap-2 items-center dark:bg-neutral-950/70 bg-neutral-100 rounded-lg"
             >
               <CardAnimation />
