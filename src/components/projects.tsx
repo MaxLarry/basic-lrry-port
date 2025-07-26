@@ -20,6 +20,12 @@ const tryData: TryData = [
     techTags: ["PWA", "HTML", "CSS", "JavaScript"],
     links: "#",
   },
+    {
+    name: "Lifesaver's Booking System",
+    desc: "A blogsite for travelers who love exploring Palawan, Philippines. Users can write blogs, share experiences, and showcase hidden gems that make Palawan worth visiting.",
+    techTags: ["Next.js", "Supabase", "TypeScript", "Tailwind"],
+    links: "#",
+  },
   {
     name: "PalaWonder",
     desc: "A blogsite for travelers who love exploring Palawan, Philippines. Users can write blogs, share experiences, and showcase hidden gems that make Palawan worth visiting.",

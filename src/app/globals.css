@@ -45,6 +45,8 @@
   --primary-dark: #156c9c;
   --primary-light: #d9f4fc;
   --accent-color: #0f4e75;
+  --gap-padding-y: clamp(1.5em, 6vw, 3.5em);
+  --gap-padding-x: clamp(1.5em, 9vw, 9.5em);
 }
 
 .dark {
@@ -602,3 +604,79 @@ main#home .header-image.mobile {
 
 /* 
 ---break--- */
+
+
+
+
+.section .lja-background {
+  width: 100%;
+  height: 110%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.section .lja-background video {
+  width: 100%;
+  height: 110vh;
+  object-fit: cover;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+
+/*--------------BIGNAME-----------------*/
+.section .big-name {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  width: 100%;
+  padding-bottom: calc(var(--gap-padding-y) * 1.25);
+}
+
+.section .big-name .name-h1 {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+
+.section .big-name .name-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.section .big-name .name-wrap .spacer {
+  padding: 0 3vw;
+}
+
+.section .big-name h1 {
+  font-family: "Krona-Regular", sans-serif;
+  text-transform: uppercase;
+  position: relative;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  font-size: max(7em, 11vw);
+  white-space: nowrap;
+  pointer-events: none;
+  margin: 0;
+  padding: 0;
+}
+
+.section .get-height {
+  height: 100vh;
+}
+
+@media screen and (max-width: 720px) {
+  .section .big-name {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding-bottom: calc(var(--gap-padding-y) * 1.25);
+  }
+}
