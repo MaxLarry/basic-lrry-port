@@ -632,7 +632,7 @@ main#home .header-image.mobile {
 /*--------------BIGNAME-----------------*/
 .section .big-name {
   position: absolute;
-  bottom: 50px;
+  bottom: 30px;
   left: 0;
   width: 100%;
   padding-bottom: calc(var(--gap-padding-y) * 1.25);

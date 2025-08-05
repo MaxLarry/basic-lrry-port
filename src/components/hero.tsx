@@ -66,7 +66,7 @@ const Hero = () => {
           <source src="/videos/bg-lja.mp4" type="video/mp4" />
         </video>
       </div>
-      <div className=" flex w-full justify-center items-center h-[550px]" >
+      <div className=" flex w-full justify-center items-center h-[500px] lg:h-[450px]" >
         <div className="max-w-7xl mx-auto px-12">
           <div className="flex flex-col justify-start gap-3">
             <motion.div
